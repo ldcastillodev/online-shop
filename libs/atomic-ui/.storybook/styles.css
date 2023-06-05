@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Questrial';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Questrial-Regular.woff');
+}
+
+@font-face {
+  font-family: 'Bayshore';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Bayshore.otf');
+}
+
+@font-face {
+  font-family: 'Jazmin';
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/Jazmin-SemiBold.otf');
+}
+
+@font-face {
+  font-family: 'Jazmin';
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Jazmin-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/Gilroy-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 500;
+  font-display: swap;
+  src: url('/fonts/Gilroy-Medium.otf');
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/Gilroy-Bold.otf');
+}
+
+.focus-visible-within:has(:focus-visible) {
+  outline: theme('colors.neutrals.900') solid 1px;
+  outline-offset: 4px;
+}

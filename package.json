@@ -13,6 +13,9 @@
   "devDependencies": {
     "nodemon": "^2.0.15"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",

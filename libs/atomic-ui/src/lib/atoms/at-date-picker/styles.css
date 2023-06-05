@@ -1,0 +1,69 @@
+@import 'react-day-picker/dist/style.css';
+
+.rdp {
+  --rdp-cell-size: 2.5rem;
+  --rdp-accent-color: theme('colors.primary.500');
+  --rdp-background-color: white;
+  --rdp-outline: 1px solid theme('colors.neutrals.900');
+  --rdp-outline-selected: 1px solid theme('colors.neutrals.900');
+
+  @apply m-0 p-4 w-[fit-content] rounded-4 shadow-level-4;
+}
+
+.rdp-caption {
+  @apply relative h-12 mb-[1.375rem];
+}
+
+.rdp-caption_label,
+.rdp-nav_button_previous,
+.rdp-nav_button_next {
+  @apply absolute top-1/2 -translate-y-1/2;
+}
+
+.rdp-caption_label {
+  @apply left-1/2 -translate-x-1/2 text-20 leading-1.3 font-heading font-medium;
+}
+
+.rdp-nav_button_next {
+  @apply right-0;
+}
+
+.rdp-head_cell {
+  height: fit-content;
+  @apply font-regular text-14 leading-1.5 text-neutrals-600;
+}
+
+.rdp-cell {
+  @apply text-14 leading-1.5 text-neutrals-800;
+}
+
+.rdp-table {
+  border-spacing: 0 0.625rem;
+  border-collapse: separate;
+}
+
+.rdp-day,
+.rdp-day_range_end.rdp-day_range_start,
+.rdp-day_range_end,
+.rdp-day_range_start {
+  @apply rounded-0 hover:outline-1 hover:outline hover:outline-neutrals-300 -outline-offset-1 focus-visible:-outline-offset-1;
+}
+
+.rdp-day_selected.rdp-button_reset:not(.rdp-day_range_middle),
+.rdp-day_selected.rdp-day_range_start,
+.rdp-day_selected.rdp-day_range_end {
+  @apply focus-visible:bg-primary-500 !text-neutrals-white;
+}
+
+.rdp-day_selected.rdp-day_range_middle:not(.rdp-day_disabled) {
+  @apply bg-primary-100 text-neutrals-800;
+}
+
+.rdp-button.rdp-day_disabled,
+.rdp-button[disabled]:not(.rdp-day_selected):not(.rdp-nav_button) {
+  @apply bg-neutrals-white text-neutrals-500 opacity-[1];
+}
+
+.rdp-button_reset.rdp-button.rdp-nav_button {
+  @apply text-primary-500 hover:text-primary-700 focus:text-primary-700 active:text-primary-900 disabled:text-primary-500 rounded-0 !bg-neutrals-white;
+}
